@@ -6,9 +6,9 @@
 
 Se puede utilizar bloqueos mutex, el cuál permite proteger datos compartidos y eso evita condiciones de carrera en entornos multi procesos.
 
-los subprocesos bloquea un mutex antes de modificar o leer cualquier dato y luego de realizar la operación cada proceso es desbloqueado.
+Los subprocesos bloquea un mutex antes de modificar o leer cualquier dato y luego de realizar la operación cada proceso es desbloqueado.
 
-- Para esto se utiliza las promesas para el envío de datos y las promesas para obtener o recibir el valor (Revisar)
+- Para esto se utiliza las promesas para el envío de datos y las promesas para obtener o recibir el valor
 
 - Una de las problematicas que se puede encontrar es que no se libere el bloqueo de un subproceso y esto hace que los demás subprocesos delprogrma queden en espera (deadlock), para solucionarlo se utiliza la plantilla lock_guard, envuelve al mutex dentro de su objeto y lo bloquea en su constructor, luego al terminar el proceso y llamar al destructor hace que se libere el mutex
 
@@ -56,7 +56,7 @@ No he estado en proyectos que implementen bien el CI/CD, entonces poseo un nivel
 
 ### R:
 
-la memoria dinámica permite reservar espacios de memoria en la zona 'Heap' con el operador 'new', el cuál tiene la función de reservar posiciones de memoria, la desventaja es que la memoria debe ser liberada de manera manual una vez que ya no se necesite mas ya que en C++ no hay una herramienta que lo haga de manera automática, existen dos soluciones para este problema, el primero es el uso de las palabras reservadas 'delete' y el segundo para versiones de C++ más nuevas es el uso de las clases especiales 'Smart Pointers' que permiten automatizar el proceso
+La memoria dinámica permite reservar espacios de memoria en la zona 'Heap' con el operador 'new', el cuál tiene la función de reservar posiciones de memoria, la desventaja es que la memoria debe ser liberada de manera manual una vez que ya no se necesite mas ya que en C++ no hay una herramienta que lo haga de manera automática, existen dos soluciones para este problema, el primero es el uso de las palabras reservadas 'delete' y el segundo para versiones de C++ más nuevas es el uso de las clases especiales 'Smart Pointers' que permiten automatizar el proceso
 
 ## 7_A- C/C++: ¿Qué es una clase abstracta?, ¿Qué es el polimorfismo y la herencia?
 
